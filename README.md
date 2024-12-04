@@ -78,7 +78,7 @@ Note: Local development still requires the Cloudflare KV namespace and Discord w
 
 ## How It Works
 
-1. The worker runs every 10 minutes via Cloudflare's cron trigger
+1. The worker runs every 30 minutes via Cloudflare's cron trigger
 2. It fetches the top 100 stories from Hacker News
 3. For each story:
    - Checks if it has already been processed (using KV storage)
@@ -90,7 +90,7 @@ Note: Local development still requires the Cloudflare KV namespace and Discord w
 ## Configuration
 
 - `SCORE_THRESHOLD`: Minimum points needed (default: 150)
-- Cron schedule: Set in `wrangler.toml` (default: every 10 minutes)
+- Cron schedule: Set in `wrangler.toml` (default: every 30 minutes)
 - Story expiration: 7 days (set in `processStory` function)
 
 ## Contributing
