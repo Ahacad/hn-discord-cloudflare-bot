@@ -1,7 +1,7 @@
-# Environment variables
 .env
-.dev.vars
+# Environment variables
 
+.dev.vars
 # Cloudflare Workers
 .wrangler/
 dist/
@@ -19,3 +19,6 @@ Thumbs.db
 # Logs
 *.log
 npm-debug.log*
+
+# node modules
+node_modules/
