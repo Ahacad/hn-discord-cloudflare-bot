@@ -1,0 +1,23 @@
+{
+  "name": "hn-discord-cloudflare-bot",
+  "version": "1.0.0",
+  "description": "A Cloudflare Worker that posts popular Hacker News stories to Discord",
+  "main": "src/worker.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hackernews",
+    "discord",
+    "bot",
+    "cloudflare",
+    "worker"
+  ],
+  "author": "ahacad",
+  "license": "AGPL",
+  "devDependencies": {
+    "wrangler": "^3.22.1"
+  }
+}
