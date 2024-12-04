@@ -52,9 +52,12 @@ wrangler kv:namespace create HN_POSTS
 ```
 
 5. Configure the worker:
-- Copy the KV namespace ID from the previous command
-- Update `kv_namespaces.id` in `wrangler.toml` with your namespace ID
+- Copy `wrangler.example.toml` to `wrangler.toml`
+```bash
+cp wrangler.example.toml wrangler.toml
+```
 - Set your Discord webhook URL as a secret:
+- Update `wrangler.toml` with your KV namespace ID from step 4
 ```bash
 wrangler secret put DISCORD_WEBHOOK_URL
 ```
