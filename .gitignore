@@ -5,6 +5,8 @@
 # Cloudflare Workers
 .wrangler/
 dist/
+# exclude the real wrangler.toml config
+wrangler.toml 
 
 # Editor files
 .vscode/

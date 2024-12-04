@@ -1,0 +1,13 @@
+name = "hn-discord-bot"
+main = "src/worker.js"
+compatibility_date = "2023-01-01"
+
+kv_namespaces = [
+  { binding = "HN_POSTS", id = "YOUR_KV_NAMESPACE_ID" }  # Replace with your KV namespace ID
+]
+
+[triggers]
+crons = ["*/30 * * * *"]  # Run every 30 minutes
+
+[vars]
+# Environment variables will be populated via wrangler
