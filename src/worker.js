@@ -91,19 +91,22 @@ async function processStory(storyId, env) {
 
     // Add status emoji based on time
     let statusEmoji = "";
+    let embedColor = 0xff6600; // HN orange as the default color
     if (delta <= 4 * 60 * 60 * 1000) {
       // 4 hours
       statusEmoji = "🔥 ";
+      embedColor = 0xff0000; // Red for new stories
     } else if (delta >= 2 * 24 * 60 * 60 * 1000) {
       // 2 days
       statusEmoji = "❄️ ";
+      embedColor = 0x00bfff; // deep sky blue for cold posts
     }
 
     // Create Discord embed
     const embed = {
       title: story.title,
       url: story.url || `https://news.ycombinator.com/item?id=${story.id}`,
-      color: 0xff6600, // HN orange
+      color: embedColor,
       fields: [
         {
           name: "Score",
